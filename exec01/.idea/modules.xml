@@ -2,7 +2,7 @@
 <project version="4">
   <component name="ProjectModuleManager">
     <modules>
-      <module fileurl="file://$PROJECT_DIR$/../../../../ws-fatecmm/github/javaFatecmmExecParte1/exec01/exec01.iml" filepath="$PROJECT_DIR$/../../../../ws-fatecmm/github/javaFatecmmExecParte1/exec01/exec01.iml" />
+      <module fileurl="file://$PROJECT_DIR$/exec01.iml" filepath="$PROJECT_DIR$/exec01.iml" />
     </modules>
   </component>
 </project>

@@ -37,7 +37,7 @@ public class FuncionarioTest {
         } while(upSal <= 0);
 
         //demitindo funcionario
-        func1.ativo = false;
+        func1.demiteFuncionario();
         System.out.println("");
         System.out.println("************DEMISSAO DO FUNCIONARIO ************");
         func1.imprimir();
