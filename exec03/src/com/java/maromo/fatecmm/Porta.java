@@ -4,7 +4,6 @@ public class Porta {
     private boolean aberta = false;
     private String cor = "branca";
     private double dx, dy, dz;
-    private String status;
 
     public void setAberta(boolean aberta) {
         this.aberta = aberta;
@@ -51,31 +50,17 @@ public class Porta {
     }
 
     public void pinta(String s){
-
+        this.cor = s;
     }
 
-    public String getStatus() {
-        return status;
-    }
-
-    public void setStatus(String status) {
-        this.status = status;
-    }
-
-    public String estaAberta(String status) {
-        if (aberta == true) {
-            status = "aberta";
-        } else {
-            status = "fechada";
-        }
-
-        return this.status = status;
+    public boolean estaAberta() {
+        return aberta;
     }
 
     @Override
     public String toString() {
         return "Porta{" +
-                "esta=" + estaAberta(status) +
+                "aberta=" + (estaAberta() == true ? "aberta" : "fechada") +
                 ", cor='" + cor + '\'' +
                 ", dx=" + dx +
                 ", dy=" + dy +
