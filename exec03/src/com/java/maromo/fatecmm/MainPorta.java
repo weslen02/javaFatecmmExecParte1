@@ -3,7 +3,7 @@ package com.java.maromo.fatecmm;
 import javax.sound.midi.Soundbank;
 import java.util.Scanner;
 
-public class Main {
+public class MainPorta {
 
     public static void main(String[] args) {
 	// write your code here
