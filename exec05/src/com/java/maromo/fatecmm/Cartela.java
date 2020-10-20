@@ -101,6 +101,7 @@ public class Cartela {
                 for (k = 0; k < this.numSorteado.length; k++) {
                     if (numSorteado[k] == cartelaJogador[i][j]) {
                         count++;
+                        break;
                     }
                 }
             }
@@ -122,7 +123,7 @@ public class Cartela {
         return false;
     }
 
-    public void conferirSorteio() {
+    private void conferirSorteio() {
         diagonal = validaDiagonal();
         linha = validaLinha();
         coluna = validaColuna();
@@ -140,6 +141,13 @@ public class Cartela {
                 }
             }
         }
+        printChar();
+
+        System.out.println("Numeros Sorteados");
+        for (k = 0; k < numSorteado.length; k++) {
+            System.out.printf("|%d\t", this.numSorteado[k]);
+        }
+        System.out.printf("%n");
         if (diagonal) {
             printChar();
             System.out.println("Bingo na Diagonal");
@@ -155,13 +163,27 @@ public class Cartela {
             printChar();
             System.out.println("Bingo na Linha");
             for (i = 0; i < TAM; i++) {
-
+                if (linhaBoole[i] == true) {
+                    for (j = 0; j < TAM; j++) {
+                        System.out.printf("|%d\t", this.cartelaJogador[i][j]);
+                    }
+                }
             }
         }
         if (coluna) {
             printChar();
             System.out.println("Bingo na Coluna");
+            for (j = 0; j < TAM; j++) {
+                if (colBoole[j] == true) {
+                    for (i = 0; i < TAM; i++) {
+                        System.out.printf("|%d\t%n", this.cartelaJogador[i][j]);
+                    }
+                }
+            }
         }
+        printChar();
+        if (!(diagonal || linha || coluna)) System.out.println("Azarado!!!! Nao deu Bingo em nada.");
+
     }
     private void printChar() {
         System.out.println("##########################################");
